@@ -48,6 +48,7 @@ body {
 	font-weight: 600;
 	border-radius: 12px;
 	min-width: 105px;
+	color: $black;
 	transition: all 0.2s ease 0s;			
 	@media (min-width: 768px) {
 		font-size: 18px;
@@ -302,7 +303,9 @@ body {
 }
 
 .home {
-	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	background: url('../images/home-mob.jpg') no-repeat center / cover;
 
 	@media (min-width: 768px) {
@@ -314,12 +317,15 @@ body {
 	}
 
 	&__wrap {
-		height: 100%;
+		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		padding: 60px 20px;
+		@media (min-width: 768px) {
+			padding: 130px 20px;
+		}
 	}
 
 	&__title {

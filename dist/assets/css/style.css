@@ -155,6 +155,7 @@ body {
   font-weight: 600;
   border-radius: 12px;
   min-width: 105px;
+  color: #372e11;
   -webkit-transition: all .2s ease 0s;
   -o-transition: all .2s ease 0s;
   transition: all .2s ease 0s
@@ -409,7 +410,14 @@ body {
   color: #372e11
 }
 .home {
-  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
   background: url(../images/home-mob.jpg) no-repeat center/cover
 }
 @media (min-width:768px) {
@@ -423,7 +431,9 @@ body {
   }
 }
 .home__wrap {
-  height: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,6 +448,11 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   padding: 60px 20px
+}
+@media (min-width:768px) {
+  .home__wrap {
+    padding: 130px 20px
+  }
 }
 .home__title {
   text-align: center;
