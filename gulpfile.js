@@ -1,30 +1,18 @@
 const { src, dest, watch, parallel, series } = require('gulp')
 
 const concat        = require('gulp-concat')
-const uglify        = require('gulp-uglify-es').default
 const scss          = require('gulp-sass')(require('sass'))
 const browserSync   = require('browser-sync').create()
 const autoprefixer  = require('gulp-autoprefixer')
 const cleancss      = require('gulp-clean-css')
-const panini        = require('panini')
 const plumber       = require('gulp-plumber')
 const notify        = require('gulp-notify')
 const del           = require('del')
-// const imagemin      = require('gulp-imagemin')
-// const rigger        = require('gulp-rigger')
-// const webpackStream = require('webpack-stream')
 
 
 function html() {
-	panini.refresh()
 	return src(['src/*.html', '!src/**/_*.html'])
 	.pipe(plumber())
-	.pipe(panini({
-		root: 'src/',
-		layouts: 'src/templates/layouts/',
-		partials: 'src/templates/partials/',
-		data: 'src/templates/data/'
-	}))
 	.pipe(dest('dist'))
 	.pipe(browserSync.stream())
 }
