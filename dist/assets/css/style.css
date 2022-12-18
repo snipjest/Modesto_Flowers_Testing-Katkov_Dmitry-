@@ -410,16 +410,16 @@ body {
 }
 .home {
   height: 100vh;
-  background: url(/assets/images/home-mob.jpg) no-repeat center/cover
+  background: url(../images/home-mob.jpg) no-repeat center/cover
 }
 @media (min-width:768px) {
   .home {
-    background: url(/assets/images/home-tablet.jpg) no-repeat center/cover
+    background: url(../images/home-tablet.jpg) no-repeat center/cover
   }
 }
 @media (min-width:1024px) {
   .home {
-    background: url(/assets/images/home.jpg) no-repeat center/cover
+    background: url(../images/home.jpg) no-repeat center/cover
   }
 }
 .home__wrap {
@@ -482,7 +482,7 @@ body {
   }
 }
 .reg {
-  background: url(/assets/images/bg.jpg) no-repeat center/cover;
+  background: url(../images/bg.jpg) no-repeat center/cover;
   padding: 20px
 }
 @media (min-width:768px) {

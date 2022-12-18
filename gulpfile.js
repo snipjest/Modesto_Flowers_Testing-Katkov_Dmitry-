@@ -30,13 +30,7 @@ function html() {
 }
 
 function styles() {
-	return src([
-		//'node_modules/swiper/swiper-bundle.min.css',
-		//'node_modules/lightgallery.js/dist/css/lightgallery.min.css',
-		//'node_modules/magnific-popup/dist/magnific-popup.css',
-		//'node_modules/simplebar/dist/simplebar.min.css',
-		'src/assets/scss/style.scss'
-	])
+	return src('src/assets/scss/style.scss')
 	.pipe(plumber({
 		errorHandler : function(err) {
 			notify.onError({
@@ -61,23 +55,7 @@ function styles() {
 }
 
 function scripts() {		
-	return src([
-		'node_modules/jquery/dist/jquery.min.js',
-		'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
-		//'node_modules/swiper/swiper-bundle.min.js',
-		//'node_modules/lightgallery.js/dist/js/lightgallery.min.js',
-		//'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-		//'node_modules/enllax/dist/jquery.enllax.min.js',
-		//'node_modules/jquery-validation/dist/jquery.validate.min.js',
-		//'node_modules/simplebar/dist/simplebar.min.js',
-		// 'src/assets/js/_popup.js',
-		// 'src/assets/js/_amount.js',
-		// 'src/assets/js/_select.js',
-		// 'src/assets/js/_tabs.js',
-		// 'src/assets/js/_validPrice.js',
-		// 'src/assets/js/_dynamic_adapt.js',
-		'src/assets/js/main.js'
-	])
+	return src('src/assets/js/main.js')
 	.pipe(plumber({
 		errorHandler : function(err) {
 			notify.onError({
